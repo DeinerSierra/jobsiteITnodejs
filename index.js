@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const bodyParser = require('body-parser');
-const expressValidator = require('express-validator');
+
 const flash = require('connect-flash');
 const passport = require('./config/passport.js');
 const createError = require('http-errors');
@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 //habilitar validacion de campos con express-validator
-app.use(expressValidator())
+
 // habilitar handlebars como view
 app.engine('handlebars', 
     exphbs({
